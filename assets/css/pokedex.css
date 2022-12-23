@@ -11,7 +11,7 @@
 }
 
 .grass {
-    background-color: #77c850;
+    background-color: #49d0b0;
 }
 
 .fire {
@@ -120,6 +120,7 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-transform: capitalize;
 }
 
 .pokemon .detail img {
@@ -146,9 +147,98 @@
     border-radius: 1rem;
 }
 
+
+.divPokemon {
+    position: absolute;
+    top: 0px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.content-2 {
+    width: 100vw;
+    display: none;
+}
+
+
+
+.boxDetalhes {
+    position: fixed;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    border-radius: 1.9rem 1.9rem 0 0;
+}
+
+.boxDetalhes img {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 90%;
+    height: 50%;
+    width: auto;
+}
+
+.divPokemon .types {
+    display: flex;
+}
+
+.divPokemon .types .type {
+    margin: 0 .2rem 0 .15rem !important;
+    font-size: .7rem !important;
+}
+
+H1 .name {
+    font-size: 2rem;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 2.5rem 0;
+    width: 100%;
+}
+
+
+.menu a {
+    padding: .1rem 1rem .8rem .4rem;
+    font-size: .84rem !important;
+    color: hsl(206deg 3% 42%);
+    text-decoration: none;
+    border-bottom: 3px solid hsl(206deg 3% 42%);
+}
+.menu a:hover, a:active {
+    border-bottom-color: #000;
+}
+ 
+.divPokemon .number {
+    color: #fff;
+    font-size: 1.05rem !important;
+    font-weight: bold;
+    opacity: unset !important;
+}
+
+#voltar {
+    height: 5% !important;
+    width: 7% !important;
+}
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .boxDetalhes img {
+        height: 55%;
+    }
+
+    .menu a {
+        padding: 1rem 1.4rem .8rem 1.4rem;
+
     }
 }
 
@@ -156,10 +246,26 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .menu {
+        border-bottom: 2px solid hsl(206deg 3% 42%);
+        width: 88%;
+        align-items: center;
+        left: 5%;
+        right: 5%;
+        justify-content: space-between;
+        position: absolute;
+    }
+
+    .menu a {
+        border-bottom: 2px solid hsl(206deg 3% 42%);
+        margin-bottom: -2px;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
 }
